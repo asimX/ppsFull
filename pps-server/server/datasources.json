@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo-pps": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "pps",
+    "username": "ppsApi",
+    "password": "styler06",
+    "name": "mongo-pps",
+    "connector": "mongodb"
+  }
+}

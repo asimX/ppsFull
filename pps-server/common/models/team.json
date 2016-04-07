@@ -1,0 +1,42 @@
+{
+  "name": "team",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "smId": {
+      "type": "string"
+    },
+    "tmId": {
+      "type": "string"
+    },
+    "memberId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "pps-users": {
+      "type": "hasMany",
+      "model": "ppsUser",
+      "foreignKey": "memberId"
+    },
+    "org": {
+      "type": "belongsTo",
+      "model": "org",
+      "foreignKey": "orgId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongo-pps",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongo-pps",
+    "public": false
+  },
+  "ppsUser": {
+    "dataSource": "mongo-pps",
+    "public": true
+  },
+  "org": {
+    "dataSource": "mongo-pps",
+    "public": true
+  },
+  "team": {
+    "dataSource": "mongo-pps",
+    "public": true
+  },
+  "proposal": {
+    "dataSource": "mongo-pps",
+    "public": true
+  },
+  "SuperAdmin": {
+    "dataSource": "mongo-pps",
+    "public": true
+  }
+}

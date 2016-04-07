@@ -1,0 +1,30 @@
+{
+  "name": "SuperAdmin",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "sa",
+      "permission": "ALLOW",
+      "property": "*"
+    }
+  ],
+  "methods": {}
+}

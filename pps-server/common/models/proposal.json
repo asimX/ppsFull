@@ -1,0 +1,28 @@
+{
+  "name": "proposal",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "BusinessName": {
+      "type": "string",
+      "required": true
+    },
+    "total": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "pps-user": {
+      "type": "belongsTo",
+      "model": "ppsUser",
+      "foreignKey": "ownerId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

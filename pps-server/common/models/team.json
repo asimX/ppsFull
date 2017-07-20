@@ -28,6 +28,11 @@
       "type": "belongsTo",
       "model": "org",
       "foreignKey": "orgId"
+    },
+    "proposals": {
+      "type": "hasMany",
+      "model": "proposal",
+      "foreignKey": ""
     }
   },
   "acls": [

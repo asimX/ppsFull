@@ -1,0 +1,3492 @@
+paths:
+  '/ppsUsers/{id}/accessTokens/{fk}':
+    get:
+      tags:
+        - ppsUser
+      summary: Find a related item by id for accessTokens.
+      operationId: ppsUser.prototype.__findById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - ppsUser
+      summary: Delete a related item by id for accessTokens.
+      operationId: ppsUser.prototype.__destroyById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - ppsUser
+      summary: Update a related item by id for accessTokens.
+      operationId: ppsUser.prototype.__updateById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+  '/ppsUsers/{id}/org':
+    get:
+      tags:
+        - ppsUser
+      summary: Fetches belongsTo relation org.
+      operationId: ppsUser.prototype.__get__org
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+  '/ppsUsers/{id}/team':
+    get:
+      tags:
+        - ppsUser
+      summary: Fetches belongsTo relation team.
+      operationId: ppsUser.prototype.__get__team
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  '/ppsUsers/{id}/proposals/{fk}':
+    get:
+      tags:
+        - ppsUser
+      summary: Find a related item by id for proposals.
+      operationId: ppsUser.prototype.__findById__proposals
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for proposals
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    delete:
+      tags:
+        - ppsUser
+      summary: Delete a related item by id for proposals.
+      operationId: ppsUser.prototype.__destroyById__proposals
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for proposals
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - ppsUser
+      summary: Update a related item by id for proposals.
+      operationId: ppsUser.prototype.__updateById__proposals
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for proposals
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/proposal'
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+  '/ppsUsers/{id}/accessTokens':
+    get:
+      tags:
+        - ppsUser
+      summary: Queries accessTokens of ppsUser.
+      operationId: ppsUser.prototype.__get__accessTokens
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccessToken'
+      deprecated: false
+    post:
+      tags:
+        - ppsUser
+      summary: Creates a new instance in accessTokens of this model.
+      operationId: ppsUser.prototype.__create__accessTokens
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - ppsUser
+      summary: Deletes all accessTokens of this model.
+      operationId: ppsUser.prototype.__delete__accessTokens
+      parameters:
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/ppsUsers/{id}/accessTokens/count':
+    get:
+      tags:
+        - ppsUser
+      summary: Counts accessTokens of ppsUser.
+      operationId: ppsUser.prototype.__count__accessTokens
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/ppsUsers/{id}/proposals':
+    get:
+      tags:
+        - ppsUser
+      summary: Queries proposals of ppsUser.
+      operationId: ppsUser.prototype.__get__proposals
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/proposal'
+      deprecated: false
+    post:
+      tags:
+        - ppsUser
+      summary: Creates a new instance in proposals of this model.
+      operationId: ppsUser.prototype.__create__proposals
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/proposal'
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    delete:
+      tags:
+        - ppsUser
+      summary: Deletes all proposals of this model.
+      operationId: ppsUser.prototype.__delete__proposals
+      parameters:
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/ppsUsers/{id}/proposals/count':
+    get:
+      tags:
+        - ppsUser
+      summary: Counts proposals of ppsUser.
+      operationId: ppsUser.prototype.__count__proposals
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /ppsUsers:
+    post:
+      tags:
+        - ppsUser
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: ppsUser.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ppsUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    put:
+      tags:
+        - ppsUser
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: ppsUser.upsert__put_ppsUsers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ppsUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    patch:
+      tags:
+        - ppsUser
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: ppsUser.upsert__patch_ppsUsers
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ppsUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    get:
+      tags:
+        - ppsUser
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: ppsUser.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ppsUser'
+      deprecated: false
+  /ppsUsers/replaceOrCreate:
+    post:
+      tags:
+        - ppsUser
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: ppsUser.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ppsUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  /ppsUsers/upsertWithWhere:
+    post:
+      tags:
+        - ppsUser
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: ppsUser.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ppsUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  '/ppsUsers/{id}/exists':
+    get:
+      tags:
+        - ppsUser
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'ppsUser.exists__get_ppsUsers_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/ppsUsers/{id}':
+    head:
+      tags:
+        - ppsUser
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'ppsUser.exists__head_ppsUsers_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - ppsUser
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: ppsUser.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    delete:
+      tags:
+        - ppsUser
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: ppsUser.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - ppsUser
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'ppsUser.prototype.updateAttributes__put_ppsUsers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ppsUser'
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    patch:
+      tags:
+        - ppsUser
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'ppsUser.prototype.updateAttributes__patch_ppsUsers_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ppsUser'
+        - name: id
+          in: path
+          description: ppsUser id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  '/ppsUsers/{id}/replace':
+    post:
+      tags:
+        - ppsUser
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: ppsUser.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ppsUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  /ppsUsers/findOne:
+    get:
+      tags:
+        - ppsUser
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: ppsUser.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  /ppsUsers/update:
+    post:
+      tags:
+        - ppsUser
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: ppsUser.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ppsUser'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /ppsUsers/count:
+    get:
+      tags:
+        - ppsUser
+      summary: Count instances of the model matched by where from the data source.
+      operationId: ppsUser.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /ppsUsers/login:
+    post:
+      tags:
+        - ppsUser
+      summary: Login a user with username/email and password.
+      operationId: ppsUser.login
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          schema:
+            type: object
+        - name: include
+          in: query
+          description: Related objects to include in the response. See the description of return value for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: >+
+              The response body contains properties of the AccessToken created on
+              login.
+
+              Depending on the value of `include` parameter, the body may contain
+              additional properties:
+
+
+
+
+
+
+
+                - `user` - `U+007BUserU+007D` - Data of the currently logged in
+
+              user. (`include=user`)
+
+
+            type: object
+      deprecated: false
+  /ppsUsers/logout:
+    post:
+      tags:
+        - ppsUser
+      summary: Logout a user with access token.
+      operationId: ppsUser.logout
+      parameters: []
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /ppsUsers/confirm:
+    get:
+      tags:
+        - ppsUser
+      summary: Confirm a user registration with email verification token.
+      operationId: ppsUser.confirm
+      parameters:
+        - name: uid
+          in: query
+          required: true
+          type: string
+        - name: token
+          in: query
+          required: true
+          type: string
+        - name: redirect
+          in: query
+          required: false
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /ppsUsers/reset:
+    post:
+      tags:
+        - ppsUser
+      summary: Reset password for a user with email.
+      operationId: ppsUser.resetPassword
+      parameters:
+        - name: options
+          in: body
+          required: true
+          schema:
+            type: object
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /ppsUsers/getRoles:
+    get:
+      tags:
+        - ppsUser
+      operationId: ppsUser.getRoles
+      parameters: []
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              rolesList:
+                type: array
+      deprecated: false
+  '/orgs/{id}/pps-users/{fk}':
+    get:
+      tags:
+        - org
+      summary: Find a related item by id for pps-users.
+      operationId: org.prototype.__findById__pps-users
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for pps-users
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    delete:
+      tags:
+        - org
+      summary: Delete a related item by id for pps-users.
+      operationId: org.prototype.__destroyById__pps-users
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for pps-users
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - org
+      summary: Update a related item by id for pps-users.
+      operationId: org.prototype.__updateById__pps-users
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for pps-users
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/ppsUser'
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  '/orgs/{id}/teams/{fk}':
+    get:
+      tags:
+        - org
+      summary: Find a related item by id for teams.
+      operationId: org.prototype.__findById__teams
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for teams
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+    delete:
+      tags:
+        - org
+      summary: Delete a related item by id for teams.
+      operationId: org.prototype.__destroyById__teams
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for teams
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - org
+      summary: Update a related item by id for teams.
+      operationId: org.prototype.__updateById__teams
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for teams
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/team'
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  '/orgs/{id}/pps-users':
+    get:
+      tags:
+        - org
+      summary: Queries pps-users of org.
+      operationId: org.prototype.__get__pps-users
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ppsUser'
+      deprecated: false
+    post:
+      tags:
+        - org
+      summary: Creates a new instance in pps-users of this model.
+      operationId: org.prototype.__create__pps-users
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/ppsUser'
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    delete:
+      tags:
+        - org
+      summary: Deletes all pps-users of this model.
+      operationId: org.prototype.__delete__pps-users
+      parameters:
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/orgs/{id}/pps-users/count':
+    get:
+      tags:
+        - org
+      summary: Counts pps-users of org.
+      operationId: org.prototype.__count__pps-users
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/orgs/{id}/teams':
+    get:
+      tags:
+        - org
+      summary: Queries teams of org.
+      operationId: org.prototype.__get__teams
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/team'
+      deprecated: false
+    post:
+      tags:
+        - org
+      summary: Creates a new instance in teams of this model.
+      operationId: org.prototype.__create__teams
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/team'
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+    delete:
+      tags:
+        - org
+      summary: Deletes all teams of this model.
+      operationId: org.prototype.__delete__teams
+      parameters:
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/orgs/{id}/teams/count':
+    get:
+      tags:
+        - org
+      summary: Counts teams of org.
+      operationId: org.prototype.__count__teams
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /orgs:
+    post:
+      tags:
+        - org
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: org.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/org'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+    put:
+      tags:
+        - org
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: org.upsert__put_orgs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/org'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+    patch:
+      tags:
+        - org
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: org.upsert__patch_orgs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/org'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+    get:
+      tags:
+        - org
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: org.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/org'
+      deprecated: false
+  /orgs/replaceOrCreate:
+    post:
+      tags:
+        - org
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: org.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/org'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+  /orgs/upsertWithWhere:
+    post:
+      tags:
+        - org
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: org.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/org'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+  '/orgs/{id}/exists':
+    get:
+      tags:
+        - org
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'org.exists__get_orgs_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/orgs/{id}':
+    head:
+      tags:
+        - org
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'org.exists__head_orgs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - org
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: org.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+    delete:
+      tags:
+        - org
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: org.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - org
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'org.prototype.updateAttributes__put_orgs_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/org'
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+    patch:
+      tags:
+        - org
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'org.prototype.updateAttributes__patch_orgs_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/org'
+        - name: id
+          in: path
+          description: org id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+  '/orgs/{id}/replace':
+    post:
+      tags:
+        - org
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: org.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/org'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+  /orgs/findOne:
+    get:
+      tags:
+        - org
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: org.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+  /orgs/update:
+    post:
+      tags:
+        - org
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: org.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/org'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /orgs/count:
+    get:
+      tags:
+        - org
+      summary: Count instances of the model matched by where from the data source.
+      operationId: org.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/teams/{id}/pps-users/{fk}':
+    get:
+      tags:
+        - team
+      summary: Find a related item by id for pps-users.
+      operationId: team.prototype.__findById__pps-users
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for pps-users
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    delete:
+      tags:
+        - team
+      summary: Delete a related item by id for pps-users.
+      operationId: team.prototype.__destroyById__pps-users
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for pps-users
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - team
+      summary: Update a related item by id for pps-users.
+      operationId: team.prototype.__updateById__pps-users
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for pps-users
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/ppsUser'
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  '/teams/{id}/org':
+    get:
+      tags:
+        - team
+      summary: Fetches belongsTo relation org.
+      operationId: team.prototype.__get__org
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/org'
+      deprecated: false
+  '/teams/{id}/proposals/{fk}':
+    get:
+      tags:
+        - team
+      summary: Find a related item by id for proposals.
+      operationId: team.prototype.__findById__proposals
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for proposals
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    delete:
+      tags:
+        - team
+      summary: Delete a related item by id for proposals.
+      operationId: team.prototype.__destroyById__proposals
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for proposals
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - team
+      summary: Update a related item by id for proposals.
+      operationId: team.prototype.__updateById__proposals
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for proposals
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/proposal'
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+  '/teams/{id}/pps-users':
+    get:
+      tags:
+        - team
+      summary: Queries pps-users of team.
+      operationId: team.prototype.__get__pps-users
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ppsUser'
+      deprecated: false
+    post:
+      tags:
+        - team
+      summary: Creates a new instance in pps-users of this model.
+      operationId: team.prototype.__create__pps-users
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/ppsUser'
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+    delete:
+      tags:
+        - team
+      summary: Deletes all pps-users of this model.
+      operationId: team.prototype.__delete__pps-users
+      parameters:
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/teams/{id}/pps-users/count':
+    get:
+      tags:
+        - team
+      summary: Counts pps-users of team.
+      operationId: team.prototype.__count__pps-users
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/teams/{id}/proposals':
+    get:
+      tags:
+        - team
+      summary: Queries proposals of team.
+      operationId: team.prototype.__get__proposals
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/proposal'
+      deprecated: false
+    post:
+      tags:
+        - team
+      summary: Creates a new instance in proposals of this model.
+      operationId: team.prototype.__create__proposals
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/proposal'
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    delete:
+      tags:
+        - team
+      summary: Deletes all proposals of this model.
+      operationId: team.prototype.__delete__proposals
+      parameters:
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/teams/{id}/proposals/count':
+    get:
+      tags:
+        - team
+      summary: Counts proposals of team.
+      operationId: team.prototype.__count__proposals
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /teams:
+    post:
+      tags:
+        - team
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: team.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/team'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+    put:
+      tags:
+        - team
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: team.upsert__put_teams
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/team'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+    patch:
+      tags:
+        - team
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: team.upsert__patch_teams
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/team'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+    get:
+      tags:
+        - team
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: team.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/team'
+      deprecated: false
+  /teams/replaceOrCreate:
+    post:
+      tags:
+        - team
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: team.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/team'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  /teams/upsertWithWhere:
+    post:
+      tags:
+        - team
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: team.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/team'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  '/teams/{id}/exists':
+    get:
+      tags:
+        - team
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'team.exists__get_teams_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/teams/{id}':
+    head:
+      tags:
+        - team
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'team.exists__head_teams_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - team
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: team.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+    delete:
+      tags:
+        - team
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: team.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - team
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'team.prototype.updateAttributes__put_teams_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/team'
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+    patch:
+      tags:
+        - team
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'team.prototype.updateAttributes__patch_teams_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/team'
+        - name: id
+          in: path
+          description: team id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  '/teams/{id}/replace':
+    post:
+      tags:
+        - team
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: team.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/team'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  /teams/findOne:
+    get:
+      tags:
+        - team
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: team.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  /teams/update:
+    post:
+      tags:
+        - team
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: team.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/team'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /teams/count:
+    get:
+      tags:
+        - team
+      summary: Count instances of the model matched by where from the data source.
+      operationId: team.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/proposals/{id}/pps-user':
+    get:
+      tags:
+        - proposal
+      summary: Fetches belongsTo relation pps-user.
+      operationId: proposal.prototype.__get__pps-user
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: proposal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ppsUser'
+      deprecated: false
+  '/proposals/{id}/team':
+    get:
+      tags:
+        - proposal
+      summary: Fetches belongsTo relation team.
+      operationId: proposal.prototype.__get__team
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: proposal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/team'
+      deprecated: false
+  /proposals:
+    post:
+      tags:
+        - proposal
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: proposal.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proposal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    put:
+      tags:
+        - proposal
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: proposal.upsert__put_proposals
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proposal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    patch:
+      tags:
+        - proposal
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: proposal.upsert__patch_proposals
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proposal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    get:
+      tags:
+        - proposal
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: proposal.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/proposal'
+      deprecated: false
+  /proposals/replaceOrCreate:
+    post:
+      tags:
+        - proposal
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: proposal.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proposal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+  /proposals/upsertWithWhere:
+    post:
+      tags:
+        - proposal
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: proposal.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/proposal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+  '/proposals/{id}/exists':
+    get:
+      tags:
+        - proposal
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'proposal.exists__get_proposals_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/proposals/{id}':
+    head:
+      tags:
+        - proposal
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'proposal.exists__head_proposals_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - proposal
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: proposal.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    delete:
+      tags:
+        - proposal
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: proposal.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - proposal
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'proposal.prototype.updateAttributes__put_proposals_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/proposal'
+        - name: id
+          in: path
+          description: proposal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+    patch:
+      tags:
+        - proposal
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'proposal.prototype.updateAttributes__patch_proposals_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/proposal'
+        - name: id
+          in: path
+          description: proposal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+  '/proposals/{id}/replace':
+    post:
+      tags:
+        - proposal
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: proposal.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proposal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+  /proposals/findOne:
+    get:
+      tags:
+        - proposal
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: proposal.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proposal'
+      deprecated: false
+  /proposals/update:
+    post:
+      tags:
+        - proposal
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: proposal.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/proposal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /proposals/count:
+    get:
+      tags:
+        - proposal
+      summary: Count instances of the model matched by where from the data source.
+      operationId: proposal.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/SuperAdmins/{id}/accessTokens/{fk}':
+    get:
+      tags:
+        - SuperAdmin
+      summary: Find a related item by id for accessTokens.
+      operationId: SuperAdmin.prototype.__findById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - SuperAdmin
+      summary: Delete a related item by id for accessTokens.
+      operationId: SuperAdmin.prototype.__destroyById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - SuperAdmin
+      summary: Update a related item by id for accessTokens.
+      operationId: SuperAdmin.prototype.__updateById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+  '/SuperAdmins/{id}/accessTokens':
+    get:
+      tags:
+        - SuperAdmin
+      summary: Queries accessTokens of SuperAdmin.
+      operationId: SuperAdmin.prototype.__get__accessTokens
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccessToken'
+      deprecated: false
+    post:
+      tags:
+        - SuperAdmin
+      summary: Creates a new instance in accessTokens of this model.
+      operationId: SuperAdmin.prototype.__create__accessTokens
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - SuperAdmin
+      summary: Deletes all accessTokens of this model.
+      operationId: SuperAdmin.prototype.__delete__accessTokens
+      parameters:
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/SuperAdmins/{id}/accessTokens/count':
+    get:
+      tags:
+        - SuperAdmin
+      summary: Counts accessTokens of SuperAdmin.
+      operationId: SuperAdmin.prototype.__count__accessTokens
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /SuperAdmins:
+    post:
+      tags:
+        - SuperAdmin
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: SuperAdmin.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SuperAdmin'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+    put:
+      tags:
+        - SuperAdmin
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: SuperAdmin.upsert__put_SuperAdmins
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SuperAdmin'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+    patch:
+      tags:
+        - SuperAdmin
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: SuperAdmin.upsert__patch_SuperAdmins
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SuperAdmin'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+    get:
+      tags:
+        - SuperAdmin
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: SuperAdmin.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+  /SuperAdmins/replaceOrCreate:
+    post:
+      tags:
+        - SuperAdmin
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: SuperAdmin.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SuperAdmin'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+  /SuperAdmins/upsertWithWhere:
+    post:
+      tags:
+        - SuperAdmin
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: SuperAdmin.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SuperAdmin'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+  '/SuperAdmins/{id}/exists':
+    get:
+      tags:
+        - SuperAdmin
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'SuperAdmin.exists__get_SuperAdmins_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/SuperAdmins/{id}':
+    head:
+      tags:
+        - SuperAdmin
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'SuperAdmin.exists__head_SuperAdmins_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - SuperAdmin
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: SuperAdmin.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+    delete:
+      tags:
+        - SuperAdmin
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: SuperAdmin.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - SuperAdmin
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'SuperAdmin.prototype.updateAttributes__put_SuperAdmins_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SuperAdmin'
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+    patch:
+      tags:
+        - SuperAdmin
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'SuperAdmin.prototype.updateAttributes__patch_SuperAdmins_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SuperAdmin'
+        - name: id
+          in: path
+          description: SuperAdmin id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+  '/SuperAdmins/{id}/replace':
+    post:
+      tags:
+        - SuperAdmin
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: SuperAdmin.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SuperAdmin'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+  /SuperAdmins/findOne:
+    get:
+      tags:
+        - SuperAdmin
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: SuperAdmin.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SuperAdmin'
+      deprecated: false
+  /SuperAdmins/update:
+    post:
+      tags:
+        - SuperAdmin
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: SuperAdmin.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SuperAdmin'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /SuperAdmins/count:
+    get:
+      tags:
+        - SuperAdmin
+      summary: Count instances of the model matched by where from the data source.
+      operationId: SuperAdmin.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /SuperAdmins/login:
+    post:
+      tags:
+        - SuperAdmin
+      summary: Login a user with username/email and password.
+      operationId: SuperAdmin.login
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          schema:
+            type: object
+        - name: include
+          in: query
+          description: Related objects to include in the response. See the description of return value for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: >+
+              The response body contains properties of the AccessToken created on
+              login.
+
+              Depending on the value of `include` parameter, the body may contain
+              additional properties:
+
+
+
+
+
+
+
+                - `user` - `U+007BUserU+007D` - Data of the currently logged in
+
+              user. (`include=user`)
+
+
+            type: object
+      deprecated: false
+  /SuperAdmins/logout:
+    post:
+      tags:
+        - SuperAdmin
+      summary: Logout a user with access token.
+      operationId: SuperAdmin.logout
+      parameters: []
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /SuperAdmins/confirm:
+    get:
+      tags:
+        - SuperAdmin
+      summary: Confirm a user registration with email verification token.
+      operationId: SuperAdmin.confirm
+      parameters:
+        - name: uid
+          in: query
+          required: true
+          type: string
+        - name: token
+          in: query
+          required: true
+          type: string
+        - name: redirect
+          in: query
+          required: false
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /SuperAdmins/reset:
+    post:
+      tags:
+        - SuperAdmin
+      summary: Reset password for a user with email.
+      operationId: SuperAdmin.resetPassword
+      parameters:
+        - name: options
+          in: body
+          required: true
+          schema:
+            type: object
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  AccessToken:
+    properties:
+      id:
+        type: string
+      ttl:
+        default: 1209600
+        description: time to live in seconds (2 weeks by default)
+        type: number
+        format: double
+      created:
+        type: string
+        format: date-time
+      userId:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - id
+    additionalProperties: false
+  org:
+    properties:
+      name:
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+    additionalProperties: false
+  team:
+    properties:
+      smId:
+        type: string
+      tmId:
+        type: string
+      memberId:
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      orgId:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - memberId
+    additionalProperties: false
+  proposal:
+    properties:
+      BusinessName:
+        type: string
+      total:
+        type: number
+        format: double
+      id:
+        $ref: '#/definitions/ObjectID'
+      ownerId:
+        $ref: '#/definitions/ObjectID'
+      teamId:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - BusinessName
+      - total
+    additionalProperties: false
+  ppsUser:
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      roles:
+        type: array
+        items:
+          type: string
+      tmId:
+        type: string
+      smId:
+        type: string
+      teamId:
+        type: number
+        format: double
+      realm:
+        type: string
+      username:
+        type: string
+      credentials:
+        type: object
+      challenges:
+        type: object
+      email:
+        type: string
+      emailVerified:
+        type: boolean
+      status:
+        type: string
+      created:
+        type: string
+        format: date-time
+      lastUpdated:
+        type: string
+        format: date-time
+      id:
+        $ref: '#/definitions/ObjectID'
+      orgId:
+        $ref: '#/definitions/ObjectID'
+      memberId:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - firstName
+      - lastName
+      - roles
+      - email
+    additionalProperties: false
+  SuperAdmin:
+    properties:
+      FirstName:
+        type: string
+      LastName:
+        type: string
+      realm:
+        type: string
+      username:
+        type: string
+      credentials:
+        type: object
+      challenges:
+        type: object
+      email:
+        type: string
+      emailVerified:
+        type: boolean
+      status:
+        type: string
+      created:
+        type: string
+        format: date-time
+      lastUpdated:
+        type: string
+        format: date-time
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - FirstName
+      - LastName
+      - email
+    additionalProperties: false
+  ObjectID:
+    type: string
+    pattern: "^[a-fA-F\\d]{24}$"
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: pps-server
+  version: 1.0.0
+  title: pps-server
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)

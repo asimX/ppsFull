@@ -21,6 +21,11 @@
       "type": "belongsTo",
       "model": "ppsUser",
       "foreignKey": "ownerId"
+    },
+    "team": {
+      "type": "belongsTo",
+      "model": "team",
+      "foreignKey": ""
     }
   },
   "acls": [],

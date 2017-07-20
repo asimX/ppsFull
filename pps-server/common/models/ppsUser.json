@@ -18,7 +18,20 @@
       "type": [
         "string"
       ],
-      "required": true
+      "required": true,
+      "isArray": true
+    },
+    "tmId": {
+      "type": "string",
+      "required": false
+    },
+    "smId": {
+      "type": "string",
+      "required": false
+    },
+    "teamId": {
+      "type": "number",
+      "required": false
     }
   },
   "validations": [],
